@@ -23,17 +23,20 @@
       <script>
       
         // add code here
-        var ul= document.getElementsByTagName("ul")[0];
-        var li = document.createElement("li");   //<li></li>
-        var input = document.getElementById("userinput");
-        // add new item only ifthe user has entered something
-        if (input.value.length>0){
-         var textNode = document.createTextNode(input.value);  //eg. "Candy"
-         li.appendChild(textNode);   // <li>Candy</li>
-         ul.appendChild(li);    //add <li>Candy</li> to the ul element
-         //clear the input box after adding the item
-         input.value="";
+       function addListAfterClick(){
+         var ul= document.getElementsByTagName("ul")[0];
+         var li = document.createElement("li");   //<li></li>
+         var input = document.getElementById("userinput");
+         // add new item only ifthe user has entered something
+         if (input.value.length>0){
+            var textNode = document.createTextNode(input.value);  //eg. "Candy"
+            li.appendChild(textNode);   // <li>Candy</li>
+            ul.appendChild(li);    //add <li>Candy</li> to the ul element
+            //clear the input box after adding the item
+            input.value="";
         }
+
+      }
 
       </script>
  
